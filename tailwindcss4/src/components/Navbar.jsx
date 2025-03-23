@@ -1,4 +1,4 @@
-import logo from "../assets/react.svg";
+import logo from "../assets/icon.svg";
 import { FaLinkedin, FaGithub, FaFileAlt } from "react-icons/fa";
 
 const Navbar = () => {
@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="mb-20 flex items-center justify-between py-6">
       {/* Logo Section */}
       <div className="flex flex-shrink-0 items-center">
-        <img src={logo} alt="logo" />
+        <img className="w-12 h-12" src={logo} alt="logo" />
       </div>
 
       {/* Icons Section */}
