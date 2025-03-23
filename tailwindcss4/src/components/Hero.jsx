@@ -1,6 +1,9 @@
+// src/components/Hero.jsx
+import React, { useEffect, useRef } from "react";
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/profile.jpg";
 import { motion } from "framer-motion";
+import Typed from "typed.js";
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -21,9 +24,31 @@ const containerRight = (delay) => ({
 });
 
 const Hero = () => {
+  // Create a ref for the element where the typed effect will appear
+  const typedElement = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(typedElement.current, {
+      strings: [
+        "Software Engineer",
+        "Full Stack Developer",
+        "Project Manager",
+        "Product Manager",
+        "Leader",
+      ],
+      typeSpeed: 40,
+      backSpeed: 50,
+      loop: true,
+    });
+
+    // Cleanup Typed instance on unmount
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className="border-b border-neutral-900 pb-4 lg:mb-8">
-      {/* Single flex container for both text and image */}
       <div className="flex flex-wrap">
         {/* Left/Text Section */}
         <div className="w-full lg:w-1/2">
@@ -42,7 +67,8 @@ const Hero = () => {
               animate="visible"
               className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
             >
-              Software Engineer
+              {/* This span will be populated by Typed.js */}
+              <span ref={typedElement} />
             </motion.span>
             <motion.p
               variants={container(0.5)}
