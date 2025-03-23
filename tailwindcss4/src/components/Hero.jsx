@@ -74,14 +74,14 @@ const Hero = () => {
               variants={container(0.5)}
               initial="hidden"
               animate="visible"
-              className="my-2 max-w-xl py-6 font-light tracking-tighter"
+              className="my-2 max-w-xl py-20 font-light tracking-tighter"
             >
               {HERO_CONTENT}
             </motion.p>
           </div>
         </div>
 
-        {/* Right/Image Section */}
+        {/* Right/Image Section
         <div className="w-full lg:w-1/2 lg:p-8">
           <div className="flex justify-center lg:justify-end">
             <motion.img
@@ -93,7 +93,7 @@ const Hero = () => {
               alt="ProfilePic"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
