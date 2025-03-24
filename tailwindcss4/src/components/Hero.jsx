@@ -65,7 +65,8 @@ const Hero = () => {
               variants={container(0.2)}
               initial="hidden"
               animate="visible"
-              className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
+              // Added animate-gradient class here to animate the gradient colors
+              className="animate-gradient bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
             >
               {/* This span will be populated by Typed.js */}
               <span ref={typedElement} />
@@ -81,7 +82,8 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right/Image Section
+        {/* Right/Image Section (currently commented out) */}
+        {/*
         <div className="w-full lg:w-1/2 lg:p-8">
           <div className="flex justify-center lg:justify-end">
             <motion.img
@@ -93,7 +95,8 @@ const Hero = () => {
               alt="ProfilePic"
             />
           </div>
-        </div> */}
+        </div>
+        */}
       </div>
     </div>
   );

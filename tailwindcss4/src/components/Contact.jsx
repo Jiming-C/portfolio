@@ -29,7 +29,7 @@ const Contact = () => {
         viewport={{ once: true }}
         className="my-10 text-center text-4xl"
       >
-        Get In Touch With Me
+        Get In Touch
       </motion.h2>
       <motion.div
         variants={detailVariant}
