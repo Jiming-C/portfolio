@@ -59,7 +59,7 @@ const Navbar = () => {
         {/* Email Me Button with Gradient Background */}
         <a
           href="mailto:jimingchen2015@gmail.com"
-          className="rounded animate-gradient bg-gradient-to-r from-pink-300 via-slate-900 to-purple-500 px-4 py-2 text-sm font-medium text-white hover:opacity-80"
+          className="rounded animate-gradient bg-gradient-to-r from-purple-950 bg-purple-700 to-purple-500 px-4 py-2 text-sm font-medium text-white hover:opacity-80"
         >
           Email Me
         </a>
